@@ -1,0 +1,73 @@
+<secta>
+	<nombre>Los hijos del sol negro</nombre>
+	<lider>Brandon</lider>
+	<presupuesto>80000000</presupuesto>
+	<adeptos>
+		<adepto>
+			<nombre>Chufli</nombre>
+			<fecha_adhesion>1530-03-14</fecha_adhesion>
+			<rango>amo</rango>
+			<ritos>
+				<seduccion>
+					<sujeto>Agustín</sujeto>
+					<valoracion>excelente</valoracion>
+				</seduccion>
+				<seduccion>
+					<sujeto>Juanse</sujeto>
+					<valoracion>pasable</valoracion>
+				</seduccion>
+			</ritos>
+		</adepto>
+		<adepto>
+			<nombre>Juan</nombre>
+			<fecha_adhesion>2022-09-26</fecha_adhesion>
+			<!-- pringao, piltrafilla, pelapatatas, jefecillo, amo -->
+			<rango>amo</rango>
+			<ritos>
+				<sacrificio>
+					<hora>03:00:00</hora>
+					<sujeto>Ayelén</sujeto>
+					<!-- malo, pasable, bueno, excelente -->
+					<valoracion>pasable</valoracion>
+				</sacrificio>
+				<baile desnudo="true">
+					<!-- luna, sol, pantalla del móvil -->
+					<luz>luna</luz>
+					<musica>Despacito</musica>
+					<valoracion>bueno</valoracion>
+				</baile>
+			</ritos>
+		</adepto>
+		<adepto>
+			<nombre>Leo</nombre>
+			<fecha_adhesion>2021-09-26</fecha_adhesion>
+			<!-- pringao, piltrafilla, pelapatatas, jefecillo, amo -->
+			<rango>amo</rango>
+			<ritos>
+				<baile desnudo="false">
+					<luz>pantalla de móvil</luz>
+					<musica>Rapidito</musica>
+					<valoracion>excelente</valoracion>
+				</baile>
+			</ritos>
+		</adepto>
+		<adepto>
+			<nombre>Agustín</nombre>
+			<fecha_adhesion>2010-12-25</fecha_adhesion>
+			<!-- pringao, piltrafilla, pelapatatas, jefecillo, amo -->
+			<rango>pelapatatas</rango>
+			<ritos>
+				<baile desnudo="true">
+					<!-- luna, sol, pantalla del móvil -->
+					<luz>sol</luz>
+					<musica>Manolo Escobar</musica>
+					<valoracion>pasable</valoracion>
+				</baile>
+				<seduccion>
+					<sujeto>Brandon</sujeto>
+					<valoracion>pasable</valoracion>
+				</seduccion>
+			</ritos>
+		</adepto>
+	</adeptos>
+</secta>

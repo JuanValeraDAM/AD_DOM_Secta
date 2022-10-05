@@ -1,0 +1,85 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="secta">
+        <xs:annotation>
+            <xs:documentation>Este elemento define una secta</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="lider" type="xs:string"/>
+                <xs:element name="presupuesto" type="xs:positiveInteger"/>
+                <xs:element name="adeptos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="adepto" maxOccurs="unbounded" minOccurs="0" type="TipoAdepto"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TipoAdepto">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="fecha_adhesion" type="xs:date"/>
+            <xs:element name="rango">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="pringao"/>
+                        <xs:enumeration value="piltrafilla"/>
+                        <xs:enumeration value="pelapatatas"/>
+                        <xs:enumeration value="jefecillo"/>
+                        <xs:enumeration value="amo"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ritos">
+                <xs:complexType>
+                    <xs:choice maxOccurs="3">
+                        <xs:element name="baile" type="TipoBaile"/>
+                        <xs:element name="sacrificio" type="TipoSacrificio"/>
+                        <xs:element name="seduccion" type="TipoSeduccion"/>
+                    </xs:choice>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="bonus" type="xs:decimal" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TipoBaile">
+        <xs:sequence>
+            <xs:element name="luz">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="luna"/>
+                        <xs:enumeration value="sol"/>
+                        <xs:enumeration value="pantalla de móvil"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="musica" type="xs:string"/>
+            <xs:element name="valoracion" type="TipoValoracion"/>
+        </xs:sequence>
+        <xs:attribute name="desnudo" type="xs:boolean"/>
+    </xs:complexType>
+    <xs:complexType name="TipoSacrificio">
+        <xs:sequence>
+            <xs:element name="hora" type="xs:time"/>
+            <xs:element name="sujeto" type="xs:string"/>
+            <xs:element name="valoracion" type="TipoValoracion"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TipoSeduccion">
+        <xs:sequence>
+            <xs:element name="sujeto" type="xs:string"/>
+            <xs:element name="valoracion" type="TipoValoracion"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="TipoValoracion">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="malo"/>
+            <xs:enumeration value="pasable"/>
+            <xs:enumeration value="bueno"/>
+            <xs:enumeration value="excelente"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
